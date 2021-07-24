@@ -5,4 +5,6 @@
 
 ### The outcome for both scripts
 * Both scripts handle the -help or -h command
-* 
+* Both scripts will also handle other flags like:
+    *   python version ie; --version, -V
+    *   verbose ie; -v, -vv
