@@ -11,15 +11,23 @@ def main():
         print(err)
         sys.exit(2)
 
-    # loop through the sys.argv values
-    for flag in sys_argv:
-        if flag == '-help' or flag == '-h':
+    # loop through the sys.argv options
+    for f, a in opts:
+        if f in ('-h', '--help'):
             help()
-        elif flag in ('--version', '-V'):
+            sys.exit()
+        elif f in ('-V', '--version'):
             print(sys.version)
-        elif flag in ('-v', '-vv'):
+        elif f in ('-o', '--output'):
+            output = f
+        elif f in ('-i', '--ifile'):
+            input_file = f
+            print('Input file is "', input_file)
+        elif f in ('-v', '-vv'):
             verbose = True
             print(verbose)
+        else:
+            assert False, "unhandled option"
 
 
 if __name__ == "__main__":
