@@ -1,5 +1,6 @@
 # import system package
-import sys, getopt
+import getopt
+import sys
 
 
 def main():
@@ -12,18 +13,18 @@ def main():
         sys.exit(2)
 
     # loop through the sys.argv options
-    for f, a in opts:
-        if f in ('-h', '--help'):
+    for arg, opt in opts:
+        if arg in ('-h', '--help'):
             help()
             sys.exit()
-        elif f in ('-V', '--version'):
+        elif arg in ('-V', '--version'):
             print(sys.version)
-        elif f in ('-o', '--output'):
-            output = f
-        elif f in ('-i', '--ifile'):
-            input_file = f
+        elif arg in ('-o', '--output'):
+            output = arg
+        elif arg in ('-i', '--ifile'):
+            input_file = arg
             print('Input file is "', input_file)
-        elif f in ('-v', '-vv'):
+        elif arg in ('-v', '-vv'):
             verbose = True
             print(verbose)
         else:

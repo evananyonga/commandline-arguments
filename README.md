@@ -8,6 +8,6 @@
 * Both scripts will also handle other flags like:
     * python version ie; --version, -V
     * verbose ie; -v, -vv
-* Both scripts should be able to handle that are options ie they take other arguments and set the variable in the script to that option like:
+* Both scripts should be able to handle arguments that are options ie they take other arguments and set the variable in the script to that option like:
   * -o and --output
   * -i and --ifile
